@@ -1,5 +1,6 @@
 package com.zup.escola.controller;
 
+import com.zup.escola.dtos.AlunoResponseDTO;
 import com.zup.escola.model.Aluno;
 import com.zup.escola.service.AlunoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,7 @@ public class AlunoController {
     private AlunoService service;
 
     @GetMapping
-    public ResponseEntity<List<Aluno>> listarAlunos(){
+    public ResponseEntity<List<AlunoResponseDTO>> listarAlunos(){
         return ResponseEntity.ok().body(service.listarAlunos());
     }
 }
