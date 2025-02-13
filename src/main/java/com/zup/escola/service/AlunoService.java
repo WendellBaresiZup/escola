@@ -13,4 +13,7 @@ public class AlunoService {
     @Autowired
     private AlunoRepository repository;
 
+    public List<Aluno> listarAlunos(){
+        return repository.findAll();
+    }
 }
