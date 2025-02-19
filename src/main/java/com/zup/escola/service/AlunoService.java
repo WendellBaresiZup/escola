@@ -1,4 +1,10 @@
 package com.zup.escola.service;
 
-public interface AlunoService {
+import com.zup.escola.dtos.AlunoRequestDTO;
+import com.zup.escola.dtos.AlunoResponseDTO;
+
+import java.util.List;
+
+public interface AlunoService{
+    List<AlunoResponseDTO> listarAlunos(AlunoRequestDTO alunoRequestDTO);
 }
